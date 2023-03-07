@@ -34,7 +34,7 @@ public class MapperTests {
         user.setUsername("test");
         user.setPassword("123456");
         user.setSalt("abc");
-        user.setEamil("153@qq.com");
+        user.setEmail("153@qq.com");
         user.setHeaderUrl("www.baidu.com");
         user.setCreateTime(new Date());
         int count = userMapper.insertUser(user);

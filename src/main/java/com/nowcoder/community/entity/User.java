@@ -48,12 +48,12 @@ public class User {
         this.salt = salt;
     }
 
-    public String getEamil() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEamil(String eamil) {
-        this.email = eamil;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getType() {
