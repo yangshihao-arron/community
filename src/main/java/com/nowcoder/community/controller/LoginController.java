@@ -50,7 +50,7 @@ public class LoginController implements CommunityConstant {
     }
 
     @RequestMapping(path = "/register", method = RequestMethod.POST)
-    public String rigister(Model model, User user){
+    public String register(Model model, User user){
         Map<String, Object> map = userService.register(user);
         if(map == null || map.isEmpty()){
             model.addAttribute("msg","注册成功了，我们已经向您的邮箱发送了一封激活邮件， 请尽快激活");
