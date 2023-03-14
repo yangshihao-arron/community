@@ -73,7 +73,6 @@ public class UserController {
             throw new RuntimeException("上传文件失败，服务器发生异常!",e);
         }
         //更新当前用户头像的路径（Web访问路径)
-        //http://localhost:8080/community/user/header/xxx.png
         User user = hostHolder.getUser();
         String headerUrl = domain + contextPath + "/user/header/"  + fileName;
         userService.updateHeader(user.getId(), headerUrl);
