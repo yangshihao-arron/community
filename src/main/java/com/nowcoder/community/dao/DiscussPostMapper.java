@@ -16,5 +16,8 @@ public interface DiscussPostMapper {
     //动态拼接，只有一个参数时，并且在<if>里使用，需要加别名
     int selectDiscussPostRows(@Param("userId")int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
 
 }
