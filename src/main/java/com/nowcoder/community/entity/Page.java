@@ -72,6 +72,6 @@ public class Page {
     public int getTo(){
         int to = current + 2;
         int total = getTotal();
-        return current > total ? total : to;
+        return to > total ? total : to;
     }
 }

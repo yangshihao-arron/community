@@ -43,7 +43,6 @@ public class HomeController {
                 discussPosts.add(map);
             }
         model.addAttribute("discussPosts", discussPosts);
-        model.addAttribute("");
         return "/index";
     }
 
