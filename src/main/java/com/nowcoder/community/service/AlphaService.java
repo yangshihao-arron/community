@@ -29,6 +29,7 @@ public class AlphaService {
     private AlphaDAO alphaDAO;
 
     @Autowired
+
     private UserMapper userMapper;
 
     @Autowired
