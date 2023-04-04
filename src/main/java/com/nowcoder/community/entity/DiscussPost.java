@@ -1,7 +1,10 @@
 package com.nowcoder.community.entity;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.util.Date;
 
+//@Document(indexName = "", type = "", shards ="",replicas = "")
 public class DiscussPost {
 
     private Integer id;
