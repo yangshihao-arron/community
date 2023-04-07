@@ -13,6 +13,7 @@ public class CommunityApplication {
 	public void init(){
 		// 解决netty启动冲突问题
 		// ElasticSearch6.0之后已经被修复了
+		System.setProperty("es.set.netty.runtime.available.processors","false");
 	}
 
 	public static void main(String[] args) {

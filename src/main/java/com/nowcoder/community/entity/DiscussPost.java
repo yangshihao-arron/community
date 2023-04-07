@@ -1,20 +1,38 @@
 package com.nowcoder.community.entity;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
 
-//@Document(indexName = "", type = "", shards ="",replicas = "")
+@Document(indexName = "discusspost", type = "_doc", shards = 6, replicas = 3)
 public class DiscussPost {
 
+    //主键
+    @Id
     private Integer id;
+
+    @Field(type = FieldType.Integer)
     private Integer userId;
+
+    // 互联网校招
+    //analyzer存储
+    //searchAnalyzer 搜索
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String title;
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String content;
+    @Field(type = FieldType.Integer)
     private Integer type;
+    @Field(type = FieldType.Integer)
     private Integer status;
+    @Field(type = FieldType.Date)
     private Date createTime;
+    @Field(type = FieldType.Integer)
     private Integer commentCount;
+    @Field(type = FieldType.Double)
     private double score;
 
 
