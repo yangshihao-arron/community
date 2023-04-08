@@ -39,7 +39,7 @@ public class DiscussPostService {
         //过滤敏感词
         post.setTitle(sensitiveFilter.filter(post.getTitle()));
         post.setContent(sensitiveFilter.filter(post.getContent()));
-
+        System.out.println(post.getStatus());
          return discussPostMapper.insertDiscussPost(post);
     }
 
