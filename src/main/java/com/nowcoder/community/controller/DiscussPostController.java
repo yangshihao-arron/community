@@ -55,6 +55,7 @@ public class DiscussPostController implements CommunityConstant {
         post.setContent(content);
         post.setStatus(0);
         post.setType(0);
+        post.setCommentCount(0);
         post.setCreateTime(new Date());
         discussPostService.addDiscussPost(post);
 
@@ -72,6 +73,7 @@ public class DiscussPostController implements CommunityConstant {
 
     @RequestMapping(path = "/detail/{discussPostId}", method = RequestMethod.GET)
     public String getDiscussPost(@PathVariable("discussPostId") int discussPostId, Model model, Page page) {
+        System.out.println("discussPostId:" + discussPostId);
         // 帖子
         DiscussPost post = discussPostService.findDiscussPostById(discussPostId);
         model.addAttribute("post", post);
