@@ -28,7 +28,7 @@ public class DataInterceptor implements HandlerInterceptor {
 
         // 统计DAU
         User user = hostHolder.getUser();
-        if( user == null) {
+        if( user != null) {
             dataService.recordDAU(user.getId());
         }
 

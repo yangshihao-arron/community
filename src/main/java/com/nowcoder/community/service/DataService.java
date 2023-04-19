@@ -53,11 +53,6 @@ public class DataService {
         return redisTemplate.opsForHyperLogLog().size(redisKey);
     }
 
-    // 将指定用户计入DAU
-//    public void recordDAU(int userId) {
-//        String redisKey = RedisKeyUtil.getDAUKey(df.format(new Date()));
-//        redisTemplate.opsForValue().setBit(redisKey, userId, true);
-//    }
 
     // 将指定用户计入DAU
     public void recordDAU(int userId) {
@@ -93,5 +88,4 @@ public class DataService {
             }
         });
     }
-
 }
